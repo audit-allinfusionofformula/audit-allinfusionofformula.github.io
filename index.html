@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tap to Earn - Web3 Colorist</title>
+    <style>
+        /* Root color variables inspired by a "Web3 Colorist" theme */
+        :root {
+            --primary-color: #3B82F6;   /* Vivid blue */
+            --secondary-color: #34D399; /* Vibrant green */
+            --background-color: #1E293B; /* Dark slate */
+            --button-color: #EAB308;    /* Bright yellow for CTA */
+            --text-color: #F1F5F9;      /* Light gray for contrast */
+        }
+
+        /* Global Styles */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            color: var(--text-color);
+            background-color: var(--background-color);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* Container styling */
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            max-width: 400px;
+            width: 100%;
+        }
+
+        /* Header */
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .header h1 {
+            font-size: 2em;
+            color: var(--primary-color);
+        }
+
+        .header p {
+            font-size: 1em;
+            color: var(--text-color);
+            margin-top: -10px;
+        }
+
+        /* Task Cards */
+        .task-card {
+            background-color: var(--secondary-color);
+            color: var(--background-color);
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 20px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .task-card h2 {
+            margin: 0;
+            font-size: 1.2em;
+        }
+
+        .task-card p {
+            margin-top: 10px;
+            font-size: 0.9em;
+        }
+
+        /* Button styling */
+        .btn {
+            background-color: var(--button-color);
+            color: var(--background-color);
+            font-size: 1em;
+            padding: 10px 20px;
+            margin-top: 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #d4a307;
+        }
+
+        /* Footer styling */
+        .footer {
+            text-align: center;
+            margin-top: auto;
+            font-size: 0.8em;
+            color: var(--text-color);
+        }
+		
+		.footer a{
+			color: inherit;
+		}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>Task Daily to Earn</h1>
+            <p>Daily airdrop tasks with Web3 rewards!</p>
+        </div>
+
+        <!-- Daily Check-In Task Card -->
+        <div class="task-card">
+            <h2>Daily Check-In</h2>
+            <p>Complete this daily task by choosing how much to invest.</p>
+            <button class="btn" onclick="window.open('https://forms.gle/example', '_blank')">Send Google Form</button>
+        </div>
+		
+		<div class="task-card">
+            <h2>Demo investment</h2>
+            <p>Complete this daily task by investing demo.</p>
+            <button class="btn" onclick="window.open('https://forms.gle/example', '_blank')">Send Google Form</button>
+        </div>
+
+        <!-- Partner Airdrop Task Card -->
+        <div class="task-card">
+            <h2>Launch Partner Airdrop (NebX)</h2>
+            <p>Earn 1 solana by completing task daily!</p>
+            <button class="btn" onclick="window.location.href='https://nebx.io/login?v=34168455'">Launch Airdrop</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>Powered by <a href='https://github.com/audit-allinfusionofformula'>audit-allinfusionofformula</a> (Web3 Colorist)</p>
+    </div>
+</body>
+</html>
