@@ -1,0 +1,23 @@
+{
+  "title": "Launch Partner Airdrop (NebX)",
+  "description": "Earn 1 solana by completing task daily!",
+  "badges": [
+    {
+      "text": "Airdrop Paid",
+      "type": "airdrop"
+    },
+    {
+      "text": "Partner Task",
+      "type": "partner"
+    },
+    {
+      "text": "Receive: 1 SOL",
+      "type": "receive"
+    }
+  ],
+  "button": {
+    "text": "Launch Airdrop",
+    "onclick": "window.location.href='https://nebx.io/login?v=34168455'",
+    "clicked": false
+  }
+}

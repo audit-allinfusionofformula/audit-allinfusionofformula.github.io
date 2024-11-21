@@ -1,0 +1,15 @@
+{
+  "title": "Daily Check-In",
+  "description": "Complete this task daily to boost your airdrop.",
+  "badges": [
+    {
+      "text": "Airdrop Paid",
+      "type": "airdrop"
+    }
+  ],
+  "button": {
+    "text": "Check-In",
+    "onclick": "window.open('#', '_blank')",
+    "clicked": false
+  }
+}

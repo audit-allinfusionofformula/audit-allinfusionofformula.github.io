@@ -1,0 +1,15 @@
+{
+  "title": "Sport Betting Blooper",
+  "description": "Jake, Paul, and Mike, Tyson Fight.",
+  "badges": [
+    {
+      "text": "Airdrop Paid",
+      "type": "airdrop"
+    }
+  ],
+  "button": {
+    "text": "Verify airdrop.",
+    "onclick": "window.open('#', '_blank')",
+    "clicked": false
+  }
+}

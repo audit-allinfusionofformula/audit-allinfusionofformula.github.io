@@ -1,0 +1,15 @@
+{
+  "title": "Guaranteed P2P Protocol Payout",
+  "description": "Support any sport, and any odds.",
+  "badges": [
+    {
+      "text": "Airdrop Paid",
+      "type": "airdrop"
+    }
+  ],
+  "button": {
+    "text": "Vesting/Bet Now.",
+    "onclick": "window.open('https://forms.gle/5mYT5rLSBHHdrenv7', '_blank')",
+    "clicked": false
+  }
+}

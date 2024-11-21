@@ -1,0 +1,28 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Task Card",
+  "type": "object",
+  "properties": {
+    "title": {"type": "string"},
+    "description": {"type": "string"},
+    "badges": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "text": {"type": "string"},
+          "type": {"type": "string", "enum": ["airdrop", "partner", "receive"]}
+        },
+        "required": ["text", "type"]
+      }
+    },
+    "button": {
+      "type": "object",
+      "properties": {
+        "text": {"type": "string"},
+        "onclick": {"type": "string"},
+        "clicked": {"type": "boolean", "default": false}
+      }
+    }
+  }
+}
