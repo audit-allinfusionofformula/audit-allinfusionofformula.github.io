@@ -5,6 +5,10 @@
     {
       "text": "Airdrop Paid",
       "type": "airdrop"
+    },
+    {
+      "text": "progress booster",
+      "type": "notice"
     }
   ],
   "button": {

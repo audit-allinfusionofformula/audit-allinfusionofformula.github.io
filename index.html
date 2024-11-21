@@ -209,7 +209,12 @@
     <div class="footer">
         <p>Powered by <a href='#'>audit-allinfusionofformula</a> (Web3 Colorist)</p>
     </div>
-    <script src="quest-loader.js"></script>
-    <script src="quest-events.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const script1 = document.createElement('script');
+        script1.src = 'quest-loader.js';
+        document.body.appendChild(script1);
+      });
+    </script>
 </body>
 </html>
