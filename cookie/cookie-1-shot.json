@@ -1,4 +1,7 @@
 {
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Task Cookie",
+  "type": "object",
   "taskId": "string",
   "participantId": "string",
   "completionTimestamp": "number",

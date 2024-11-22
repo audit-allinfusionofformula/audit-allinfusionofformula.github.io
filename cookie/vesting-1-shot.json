@@ -1,0 +1,19 @@
+{
+"$schema": "http://json-schema.org/draft-07/schema#",
+"title": "Vesting Tracker",
+"type": "object",
+  "participantId": "string",
+  "vestedAmounts": [
+    {
+      "transactionId": "string",
+      "vestedAmount": "number",
+      "TxID": "string",
+      "status": "string",  // e.g., "vested", "non-vested"
+      "timestamp": "number",
+      "failedTransactionDetails": {
+        "reObtainable": "boolean",
+        "futureVestingAllowed": "boolean"
+      }
+    }
+  ]
+}
