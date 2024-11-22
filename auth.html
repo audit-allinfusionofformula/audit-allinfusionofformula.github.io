@@ -164,24 +164,49 @@
     </style>
 </head>
 <body>
-    <div class="container-quest-few-shot">
-        <!-- Header -->
-        <div class="header">
-            <h1>Quest Daily to Earn</h1>
-            <p>Daily airdrop tasks with Web3 rewards!</p>
-        </div>
-
-        <!-- Daily Check-In Task Card -->       
-    </div>
+    <form id="kyc-auth-form">
+      <label for="kyc-code">Enter your KYC code:</label>
+      <input type="text" id="kyc-code" name="kyc-code" required>
+      <button type="submit">Submit</button>
+    </form>
     <!-- Footer -->
     <div class="footer">
         <p>Powered by <a href='#'>audit-allinfusionofformula</a> (Web3 Colorist)</p>
     </div>
     <script>
-      document.addEventListener('DOMContentLoaded', () => {
-        const script1 = document.createElement('script');
-        script1.src = 'quest-loader.js';
-        document.body.appendChild(script1);
+      const authService = require('./authService');
+      
+      const kycAuthForm = document.getElementById('kyc-auth-form');
+      
+      kycAuthForm.addEventListener('submit', async (event) => {
+        event.preventDefault();
+        const kycCode = document.getElementById('kyc-code').value;
+        try {
+          const customerData = await authService.authenticate(kycCode);
+          // Display the statement
+          const statementContainer = document.getElementById('statement-container');
+          statementContainer.innerHTML = `
+            <table>
+              <thead>
+                <tr>
+                  <th>Column 1</th>
+                  <th>Column 2</th>
+                </tr>
+              </thead>
+              <tbody>
+                ${customerData.statement.map((row) => `
+                  <tr>
+                    <td>${row.column1}</td>
+                    <td>${row.column2}</td>
+                  </tr>
+                `).join('')}
+              </tbody>
+            </table>
+          `;
+        } catch (error) {
+          // Handle authentication error
+          console.error(error);
+        }
       });
     </script>
 </body>

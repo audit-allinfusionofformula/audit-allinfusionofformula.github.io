@@ -1,0 +1,13 @@
+{
+  "taskId": "string",
+  "participantId": "string",
+  "completionTimestamp": "number",
+  "completionData": {
+    "score": "number",
+    "feedback": "string",
+    "evaluatorId": "string",
+    "evaluationTimestamp": "number",
+    "evaluationStatus": "string",
+    "evaluationComments": "string"
+  }
+}
