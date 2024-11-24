@@ -5,7 +5,7 @@
  * @const {Element} taskContainer - The container element to render the task cards.
  */
 const cacheDir = 'cache/';
-const taskContainer = document.querySelector('.container-quest-few-shot');
+const taskContainer = document.querySelector('.quest-few-shot');
 
 /**
  * Get a list of files in the cache directory and fetch their contents.
@@ -37,6 +37,22 @@ fetch(repoUrl)
      */
     Promise.all(filePromises).then(fileDataArray => {
       fileDataArray.forEach(fileData => {
+        const fileName = `audit-allinfusionofformula-quests-${fileData.title}`;
+        const localStorageItem = localStorage.getItem(fileName);
+        if (localStorageItem) {
+          const savedTimestamp = parseInt(localStorageItem, 10);
+          const currentTime = Date.now();
+          const savedDate = new Date(savedTimestamp);
+          const currentDate = new Date();
+          if (Math.abs(currentTime - savedTimestamp) > 5 * 60 * 60 * 1000 &&
+              (savedDate.getDate() !== currentDate.getDate() ||
+              savedDate.getMonth() !== currentDate.getMonth() ||
+              savedDate.getFullYear() !== currentDate.getFullYear())) {
+            localStorage.removeItem(fileName);
+          } else {
+            return;
+          }
+        }
         const taskHtml = `
           <div class="task-card">
             <h2>${fileData.title}</h2>
@@ -44,7 +60,7 @@ fetch(repoUrl)
             <div class="badges">
               ${fileData.badges.map(badge => `<span class="badge badge-${badge.type}">${badge.text}</span>`).join('')}
             </div>
-            <button class="btn" onclick="${fileData.button.onclick}">${fileData.button.text}</button>
+            <button class="btn" onclick="${fileData.button.onclick}" hidden>${fileData.button.text}</button>
           </div>
         `;
         taskContainer.insertAdjacentHTML('beforeend', taskHtml);

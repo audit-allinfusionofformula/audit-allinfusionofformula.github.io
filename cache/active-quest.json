@@ -9,7 +9,7 @@
   ],
   "button": {
     "text": "Check-In",
-    "onclick": "window.open('#', '_blank')",
+    "onclick": "window.open('https://forms.gle/DUn357UVu4EiiJ2Q9', '_blank')",
     "clicked": false
   }
 }
