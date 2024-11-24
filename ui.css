@@ -124,6 +124,10 @@ body, html {
     background-color: #f0ad4e; /* orange */
 }
 
+.badge-multiple {
+  border-radius: 0;
+}
+
 @media only screen and (max-width: 768px) {
     .task-card h2 {
         font-size: 18px;

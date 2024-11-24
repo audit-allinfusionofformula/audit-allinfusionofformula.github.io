@@ -58,7 +58,7 @@ fetch(repoUrl)
             <h2>${fileData.title}</h2>
             <p>${fileData.description}</p>
             <div class="badges">
-              ${fileData.badges.map(badge => `<span class="badge badge-${badge.type}">${badge.text}</span>`).join('')}
+              ${fileData.badges.map((badge, index, array) => `<span class="badge badge-${badge.type}${array.length > 1 ? ' badge-multiple' : ''}">${badge.text}</span>`).join('')}
             </div>
             <button class="btn" onclick="${fileData.button.onclick}" hidden>${fileData.button.text}</button>
           </div>
