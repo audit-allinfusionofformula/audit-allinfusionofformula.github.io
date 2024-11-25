@@ -22,8 +22,8 @@ taskCardContainer.addEventListener('click', (event) => {
     const button = event.target.querySelector('button');
 
     // Trigger the click event on the button
-    button.click();
     saveTaskDescriptionOnClick(event);
+    button.click();
   }
 });
 
