@@ -37,7 +37,7 @@ fetch(repoUrl)
      */
     Promise.all(filePromises).then(fileDataArray => {
       fileDataArray.forEach(fileData => {
-        const fileName = `audit-allinfusionofformula-quests-${fileData.title}`;
+        const fileName = `audit-allinfusionofformula-quests-${fileData.description}`;
         const localStorageItem = localStorage.getItem(fileName);
         if (localStorageItem) {
           const savedTimestamp = parseInt(localStorageItem, 10);

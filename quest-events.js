@@ -9,8 +9,9 @@ taskCardContainer.addEventListener('touchstart', (event) => {
     const button = event.target.querySelector('button');
 
     // Trigger the click event on the button
-    button.click();
-    saveTaskDescriptionOnClick(event);
+    //button.click();
+    //saveTaskDescriptionOnClick(event);
+    button.removeAttribute('hidden');
   }
 }, { passive: true });
 
